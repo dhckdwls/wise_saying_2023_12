@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import com.ws.wiseSaying.controller.entity.WiseSaying;
+
 public class App {
 	private Scanner sc;
 
