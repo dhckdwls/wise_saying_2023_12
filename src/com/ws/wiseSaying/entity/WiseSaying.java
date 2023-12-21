@@ -1,4 +1,5 @@
-package com.ws.wiseSaying.controller.entity;
+package com.ws.wiseSaying.entity;
+
 public class WiseSaying {
 	private int id;
 	private String content;
