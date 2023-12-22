@@ -2,8 +2,8 @@ package com.ws.wiseSaying.controller;
 
 import java.util.List;
 
-import com.ws.Container;
-import com.ws.Rq;
+import com.ws.Container;//모든 곳에 사용될 수 있는 공공재를 사용할 수 있게 연결
+import com.ws.Rq;//전달된 명령어를 구분짓는 알큐를 통해 명령어를 확인하고 사용하기 위해서
 import com.ws.wiseSaying.entity.WiseSaying;
 import com.ws.wiseSaying.service.WiseSayingService;
 
@@ -32,7 +32,7 @@ public class WiseSayingController {
 		System.out.println("번호  /  작가  /  명언  ");
 		System.out.println("=".repeat(30));
 
-		for (int i = wiseSayings.size() - 1; i >= 0; i--) {
+		for (int i = wiseSayings.size() - 1; i >= 0; i--) {//리스트의 사이즈를 재고 -1한 값을i에 대입 i값이 0이될때까지 반복 이는 인덱스를 활용해서 찾기 위함 
 			WiseSaying ws = wiseSayings.get(i);
 
 			System.out.printf("%d  /  %s  /  %s\n", ws.getId(), ws.getAuthor(), ws.getContent());
@@ -64,6 +64,7 @@ public class WiseSayingController {
 
 	public void modify(Rq rq) {
 		int id = rq.getIntParam("id", -1);
+		//id에 rq를 실행해서 얻는 값을 가져온다
 
 		if (id == -1) {
 			System.out.println("id(정수)를 제대로 입력해주세요");
