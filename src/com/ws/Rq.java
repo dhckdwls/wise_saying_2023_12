@@ -51,5 +51,12 @@ public class Rq {
 		}
 		return defaultValue;
 	}
-
+	
+	public int getIntParam(String name) {
+		try {
+			return Integer.parseInt(getParam(name));
+		}catch(NumberFormatException e) {
+		}
+		return -1;
+	}
 }
