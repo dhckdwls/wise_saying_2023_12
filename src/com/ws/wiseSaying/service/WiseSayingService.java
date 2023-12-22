@@ -41,6 +41,8 @@ public class WiseSayingService {
 	public void list() {
 		if (wiseSayings.size() == 0) {
 			System.out.println("등록 된 명언이 없어");
+			
+			
 		} else {
 			System.out.println("번호  /  작가  /  명언  ");
 			System.out.println("=".repeat(30));
@@ -58,7 +60,7 @@ public class WiseSayingService {
 
 		if (id == -1) {
 			System.out.println("id(정수)를 제대로 입력해주세요");
-			return;
+			
 		}
 		// 입력된 id와 일치하는 명언 객체 찾기
 		WiseSaying wiseSaying = findById(id);
